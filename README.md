@@ -2,6 +2,13 @@
 
 > read key/value pairs from etcd and convert it to dotenv file with expansion
 
+## installation
+
+```
+go get -u -v github.com/coralhq/groot
+go install github.com/coralhq/groot
+```
+
 ## sample use case
 
 ```
