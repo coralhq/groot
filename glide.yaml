@@ -1,0 +1,7 @@
+package: github.com/coralhq/groot
+import:
+- package: github.com/coreos/etcd
+  version: ~3.1.0
+  subpackages:
+  - client
+- package: github.com/spf13/viper
