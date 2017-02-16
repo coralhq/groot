@@ -49,6 +49,16 @@ func main() {
 	baseDir = viper.GetString("base_dir")
 	envDir = viper.GetString("env_dir")
 
+	if urls == "" {
+		log.Fatal("ETCD_URLS environment variable is required")
+	}
+	if baseDir == "" {
+		log.Fatal("ETCD_BASE_DIR environment variable is required")
+	}
+	if envDir == "" {
+		log.Fatal("ETCD_ENV_DIR environment variable is required")
+	}
+
 	cfg := client.Config{
 		Endpoints:               strings.Split(urls, ","),
 		Transport:               client.DefaultTransport,
